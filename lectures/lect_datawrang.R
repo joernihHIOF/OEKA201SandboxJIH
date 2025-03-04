@@ -1,22 +1,25 @@
-# Installing packages
+### 0. Installing packages ###
 library(devtools)
 library(readr)
 library(datasets)
 library(dplyr)
-library(writexl) 
+library(writexl)
 library(googlesheets4)
 install_github("joernih/OEKA201Assignment")
 install.packages("googlesheets4")
-data(package = "datasets")
-data(package = "OEKA201Assignment")
+|#install_github("joernih/https://github.com/joernih/WASMA")
+
+
 
 ### I. Importing data to R ###
+data(package = "datasets")
+data(package = "OEKA201Assignment")
 ## a) From CSV-format
 df_iris  <- iris
 ## c) From CSV-format
 df_wine <- read_csv("https://raw.githubusercontent.com/joernih/OEKA201Assignment/refs/heads/main/data-raw/csv/wine.csv")
 ## c) From Spreadsheets
-### ca) Excel 
+### ca) Excel
 df_excl <- readxl::read_excel("read.xlsx")
 summary(df_excl)
 ### cb) Google
@@ -44,13 +47,19 @@ df_app0out <- df_app0 %>%
   # Insert comment
   rename(user_id = id) %>%
   # Insert comment
-  slice(1:3) 
+  slice(1:3)
+
 ## Application 2
-df_app2out <- df_wine %>% 
+df_app2out <- df_wine %>%
   # Insert comment
 	na.omit()
 
-## Application 3 
+#nb_ts
+#fred_ts[[2]]
+#fred_ts[[2]]
+#data_vk <- data.frame(nb_ts[[1]][[1]])
+
+## Application 3
 df_app3out <- df_app0
 ## Application 4a
 df_app4aout <- df_app0 #%>%
@@ -63,15 +72,15 @@ df_app4bout <- df_app0 #%>%
 data <- data.frame(x = c(1, 2, 3), y = c("A", "B", "C"))
 write.csv(data, "output.csv", row.names = FALSE)
 ## To spreadsheets
-# import writexl library 
-library(writexl) 
+# import writexl library
+library(writexl)
 
-# Create a data frame 
-data <- data.frame(player=c('A', 'B', 'C', 'D'), 
-				runs=c(100, 200, 408, NA), 
-				wickets=c(17, 20, NA, 5)) 
+# Create a data frame
+data <- data.frame(player=c('A', 'B', 'C', 'D'),
+				runs=c(100, 200, 408, NA),
+				wickets=c(17, 20, NA, 5))
 
-# Import data in dataframe to an excel sheet 
+# Import data in dataframe to an excel sheet
 ## Excel
 write_xlsx(data, "write.xlsx")
 ## Google sheet
