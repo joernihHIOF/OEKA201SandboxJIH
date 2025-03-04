@@ -1,26 +1,32 @@
 # Installing packages
-install_github("joernih/OEKA201Assignment")
+library(devtools)
 library(readr)
 library(datasets)
-library(devtools)
 library(dplyr)
 library(writexl) 
+library(googlesheets4)
+install_github("joernih/OEKA201Assignment")
+install.packages("googlesheets4")
 data(package = "datasets")
 data(package = "OEKA201Assignment")
-# Importing data to R 
-dfrimp  <- iris
-## From CSV-format
-dfcsvimp <- read_csv("https://raw.githubusercontent.com/joernih/OEKA201Assignment/refs/heads/main/data-raw/csv/wine.csv")
-## From Spreadsheets
-### Excel
-data_read_exc <- readxl::read_excel("lect1_exc.xlsx")
-#summary(data_read_exc)
 
-### Google
+### I. Importing data to R ###
+## a) From CSV-format
+df_iris  <- iris
+## c) From CSV-format
+df_wine <- read_csv("https://raw.githubusercontent.com/joernih/OEKA201Assignment/refs/heads/main/data-raw/csv/wine.csv")
+## c) From Spreadsheets
+### ca) Excel 
+df_excl <- readxl::read_excel("read.xlsx")
+summary(df_excl)
+### cb) Google
+gs4_deauth()
+df_gosp <- read_sheet("https://docs.google.com/spreadsheets/d/12V808zXNxFvWldpsfU3A8vo9ZNVbqFB7LQmTht_Pjbc/edit?usp=sharing")
+summary(df_gosp)
 
-# Data transformation in R and Python
+### II. Data transformation in R and Python ###
 # The dplyr package
-## Application 0
+## Application 1
 df_app0 <- data.frame(
   id = c(1, 2, 3, 4, 5),
   name = c("Alice", "Bob", "Charlie", "David", "Eve"),
@@ -40,16 +46,18 @@ df_app0out <- df_app0 %>%
   # Insert comment
   slice(1:3) 
 ## Application 2
-df_app2out <- df_app0 #%>%
-## Application 3
-df_app3out <- df_app0 #%>%
+df_app2out <- df_wine %>% 
+  # Insert comment
+	na.omit()
+
+## Application 3 
+df_app3out <- df_app0
 ## Application 4a
 df_app4aout <- df_app0 #%>%
 ## Application 4b
 df_app4bout <- df_app0 #%>%
 
-# Exporting data from R and Python
-
+### III. Exporting data from R and Python ###
 ## To R data format (hyperfast!)
 ## To CSV
 data <- data.frame(x = c(1, 2, 3), y = c("A", "B", "C"))
