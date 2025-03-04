@@ -7,14 +7,13 @@ library(writexl)
 library(googlesheets4)
 library(ggplot2)
 install_github("joernih/OEKA201Assignment")
-install_github("dickoa/gretlReadWrite")
 install.packages("googlesheets4")
 df_iris  <- iris
 nb_ts <- get(load("../data/nb_ts.rda"))
 fred_ts <- get(load("../data/fred_ts.rda"))
 
 ### I. Importing data to R ###
-## a) Directoy from R 
+## a) Directoy from R
 df_res <- data(package = "datasets")$results
 df_res
 df_asg <- data(package = "OEKA201Assignment")$results
@@ -52,6 +51,7 @@ app1out <- df_app1 %>%
   rename(user_id = id) %>%
   # Insert comment
   slice(1:3)
+#View(app1out)
 
 ## Application 2
 df_app2out <- df_wine %>%
@@ -61,6 +61,7 @@ df_app2out <- df_wine %>%
   # Insert comment
    na.omit()
 df_app2out
+#View(app2out)
 
 ## Application 3a
 ### Settings
@@ -72,7 +73,7 @@ startd_n <- '2024-01-01'
 plv <- c('nvalue','growth')[1]
 
 ### Data transformation
-app4aout <- 
+app3aout <-
  fred_ts[[2]] %>%
   # Insert comment
  dplyr::filter(id==mvar,country=="NOR") %>%
@@ -85,27 +86,28 @@ app4aout <-
   # Insert comment
  dplyr::mutate(nvalue=100*value/value[1]) %>%
   # Insert comment
- dplyr::mutate(lnalue=log(value)) %>% 
+ dplyr::mutate(lnalue=log(value)) %>%
   # Insert comment
- dplyr::mutate(lvalue=dplyr::lag(value,n=12)) %>% 
+ dplyr::mutate(lvalue=dplyr::lag(value,n=12)) %>%
   # Insert comment
- dplyr::mutate(growth=round(value/lvalue-1, 6)*100) 
+ dplyr::mutate(growth=round(value/lvalue-1, 6)*100)
 
 # Finding the mean values for all variables in fred_ts
-mv1 <- mean(app4aout[[plv]], na.rm=TRUE)
+mv1 <- mean(app3aout[[plv]], na.rm=TRUE)
+#View(app3aout)
 
 ### Plot
-summary(app4aout,5)
+summary(app3aout,5)
 
 ### Plot
-pp1 <- ggplot(app4aout,aes(x = date, y = !!as.name(plv))) + 
+pp1 <- ggplot(app3aout,aes(x = date, y = !!as.name(plv))) +
   geom_point() + # ...
   geom_vline(xintercept = as.numeric(vd1), linetype = "dashed", color = "blue") + # ...
   geom_vline(xintercept = as.numeric(vd2), linetype = "dashed", color = "blue") + # ...
   geom_label(y=100,x=as.numeric(vd1),label="Pandemi sluttfase") + # ...
   geom_label(y=100,x=as.numeric(vd2),label="Pandemi startfase") + # ...
   geom_hline(yintercept = mv1, linetype = "dashed", color = "red") + # ...
-  geom_line() + 
+  geom_line() +
   theme_classic()
 pp1
 
@@ -120,7 +122,7 @@ mvar <- c("mb3","cpi","une","mba","int","gdp")[1]
 plv <- c('nvalue','growth')[1]
 
 ### Data transformation
-app4bout <- 
+app3bout <-
  fred_ts[[2]] %>%
  # Insert comment
  dplyr::filter(id==mvar,country%in%lnd) %>%
@@ -137,21 +139,21 @@ app4bout <-
  # Insert comment
  dplyr::mutate(nvalue=100*value/value[1]) %>%
  # Insert comment
- dplyr::mutate(lnalue=log(value)) %>% 
+ dplyr::mutate(lnalue=log(value)) %>%
  # Insert comment
- dplyr::mutate(lvalue=dplyr::lag(value,n=12)) %>% 
+ dplyr::mutate(lvalue=dplyr::lag(value,n=12)) %>%
  # Insert comment
  dplyr::mutate(growth=round(value/lvalue-1, 6)*100) %>%
- dplyr::ungroup() 
-mv2 <- mean(app4bout[[plv]], na.rm=TRUE)
+ dplyr::ungroup()
+mv2 <- mean(app3bout[[plv]], na.rm=TRUE)
 
 ### Summary
-summary(app4bout,5)
+summary(app3bout,5)
 
 ### Plot
-ggplot2::ggplot(data=app4bout, aes(x = date, y =!!as.name(plv))) +
-  geom_line(aes(color = couid)) + ggplot2::labs(title='Tidsserier') + 
-  geom_label(y=100,x=as.numeric(vd1),label="Pandemi sluttfase") + 
+ggplot2::ggplot(data=app3bout, aes(x = date, y =!!as.name(plv))) +
+  geom_line(aes(color = couid)) + ggplot2::labs(title='Tidsserier') +
+  geom_label(y=100,x=as.numeric(vd1),label="Pandemi sluttfase") +
   geom_label(y=100,x=as.numeric(vd2),label="Pandemi startfase") +
   ggplot2::theme_minimal()
 
@@ -160,7 +162,7 @@ ggplot2::ggplot(data=app4bout, aes(x = date, y =!!as.name(plv))) +
 ## a) To R data format (hyperfast!)
 library(usethis)
 # You can yourself determine the file path
-save(df_app2out, file = "data/abc.rda")
+save(df_app2out, file = "../data/abc.rda")
 
 
 ## b) To CSV
@@ -179,4 +181,7 @@ data <- data.frame(player=c('A', 'B', 'C', 'D'),
 ## Excel
 write_xlsx(df_iris, "write.xlsx")
 ## Google sheet
+
+
+
 
