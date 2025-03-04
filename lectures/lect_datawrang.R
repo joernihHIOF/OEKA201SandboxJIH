@@ -7,6 +7,7 @@ library(writexl)
 library(googlesheets4)
 library(ggplot2)
 install_github("joernih/OEKA201Assignment")
+install_github("dickoa/gretlReadWrite")
 install.packages("googlesheets4")
 df_iris  <- iris
 nb_ts <- get(load("../data/nb_ts.rda"))
@@ -54,32 +55,14 @@ app1out <- df_app1 %>%
 
 ## Application 2
 df_app2out <- df_wine %>%
+  # Exercise: Try to insert three new pipes
+  # Insert comment
+  # Insert comment
   # Insert comment
    na.omit()
 df_app2out
 
-
-## Application 3
-### Settings
-startd_i <- '2016-01-01'
-startd_n <- '2021-10-05'
-vexr <- c("value_EUR","value_USD")[1]
-
-app3out <- data.frame(nb_ts[[1]][[1]]) %>% 
- dplyr::mutate(date=base::as.Date(dato)) %>%
-  # Insert comment
- dplyr::filter(date>startd_i) %>%
-  # Insert comment
- dplyr::filter(date<startd_n) 
-
-ggplot2::ggplot(app3out , aes(x = date, y =!!as.name(vexr))) + 
-  # Insert comment
-  ggplot2::geom_point() +
-  # Insert comment
-  ggplot2::labs(x = "Date", y = "Exchange Rate", color = "Currency") +
-  ggplot2::theme_classic()
-
-## Application 4a
+## Application 3a
 ### Settings
 mvar <- c("mb3","cpi","une","mba","int","gdp")[1]
 vd1 <- as.Date("2022-01-01")
@@ -126,7 +109,7 @@ pp1 <- ggplot(app4aout,aes(x = date, y = !!as.name(plv))) +
   theme_classic()
 pp1
 
-## Application 4b
+## Application 3b
 ### Settings
 lnd <- c("USA","JPN","EUZ","GBR","CAN","NOR","DEN","SWE","SKE")[c(6,1,2,3)]
 vd1 <- as.Date("2022-01-01")
