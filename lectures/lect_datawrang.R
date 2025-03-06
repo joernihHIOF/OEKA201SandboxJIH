@@ -21,14 +21,14 @@ df_asg
 
 ## b) From CSV-format
 df_wine <- read_csv("https://raw.githubusercontent.com/joernih/OEKA201Assignment/refs/heads/main/data-raw/csv/wine.csv")
+View(df_wine)
+
 ## c) From Spreadsheets
 ### ca) Excel
 df_excl <- readxl::read_excel("read.xlsx")
+#View(df_excl)
 summary(df_excl)
 ### cb) Google
-gs4_deauth()
-df_gosp <- read_sheet("https://docs.google.com/spreadsheets/d/12V808zXNxFvWldpsfU3A8vo9ZNVbqFB7LQmTht_Pjbc/edit?usp=sharing")
-summary(df_gosp)
 
 ### II. Data transformation in R and Python ###
 # The dplyr package
@@ -38,8 +38,8 @@ df_app1 <- data.frame(
   name = c("Alice", "Bob", "Charlie", "David", "Eve"),
   age = c(25, 30, 35, 40, 45)
 )
+
 app1out <- df_app1 %>%
-  # Insert comment
   filter(age > 30) %>%
   # Insert comment
   select(id, name) %>%
@@ -50,18 +50,15 @@ app1out <- df_app1 %>%
   # Insert comment
   rename(user_id = id) %>%
   # Insert comment
-  slice(1:3)
-#View(app1out)
+  slice(1:2)
+View(app1out)
 
 ## Application 2
-df_app2out <- df_wine %>%
-  # Exercise: Try to insert three new pipes
-  # Insert comment
-  # Insert comment
-  # Insert comment
+app2out <- df_wine %>%
+  select(price,Age) %>%
+  # Insert comment %>%
    na.omit()
-df_app2out
-#View(app2out)
+# View(app2out)
 
 ## Application 3a
 ### Settings
@@ -181,7 +178,4 @@ data <- data.frame(player=c('A', 'B', 'C', 'D'),
 ## Excel
 write_xlsx(df_iris, "write.xlsx")
 ## Google sheet
-
-
-
 
