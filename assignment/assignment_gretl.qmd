@@ -13,44 +13,19 @@ author:
       - Stanford University
 ---
 
-[Assignment](https://hiof.instructure.com/courses/9596/files/folder/Assignment?preview=1695176) using the Quarto (qmd) format discussed in [lecture #3](https://joernih.github.io/OEKA201ProgrammingWebPage/all_pres.html#/section-19)
-
-```{r}
-#| echo: false
-#| eval: true
-library(readr)
-library(broom)
-library(gretlR)
-suppressPackageStartupMessages(library(dplyr))
-# Reading data
-
-##¤ 1. model specifications ###
-#### Model 1
-asbjmlv1 <- "price_i=\\beta_0+\\beta_1 Age_i"
-asbjmev1 <- price ~ Age 
-
-#### Model 2
-#Estimate a multiple regression model where you include all of the variables in the
-#data set as independent variables (except price which is the dependent variable).
-asbjmlv2 <- "price_i = \\beta_0+\\beta_1 Age_i + \\beta_2 WinterRain_i + \\beta_3 temp_i + \\beta_4 HarvestRain_i"
-asbjmev2 <- price ~ Age + WinterRain + temp + HarvestRain 
-
-#### Model 3
-#pricet = β0 + β1Dheavyraint + β2tempt + β3tempt · Dheavyraint + ut
-asbjmlv3 <- "price_i = \\beta_0+\\beta_1 Age_i + \\beta_2 WinterRain_i + \\beta_3 temp_i + \\beta_4 HarvestRain_i + \\beta_5 Dheavyraint"
-asbjmev3 <- price ~ Age + WinterRain + temp + HarvestRain + Dheavyraint
-```
-
-\begin{aligned}
-price_t = \beta_0 + \beta_1Age \\
-price_t = \beta_0 + \beta_1Age + \beta_2WinterRain  +\beta_3temp + \beta_3HarvestRain \\
-price_t = \beta_0 + \beta_1Dheavyraint + \beta_2tempt + \beta_3tempt · Dheavyraint + ut
-\end{aligned}
+[Bjørnar's assignment](https://hiof.instructure.com/courses/9596/files/folder/Assignment?preview=1695176) 
 
 
 ## Exercise 1 
 
+Inline equations $\theta=2+2$
+
+
 ## Exercise 2 
+*Model 1*
+\begin{aligned}
+price_t = \beta_0 + \beta_1Age \\
+\end{aligned}
 a.
 a.
 a.
@@ -58,39 +33,26 @@ a.
 a.
 
 ## Exercise 3 
+*Model 2*
+\begin{aligned}
+price_t = \beta_0 + \beta_1Age + \beta_2WinterRain  +\beta_3temp + \beta_3HarvestRain \\
+\end{aligned}
 a.
 a.
 a.
 
 ## Exercise 4 
+*Model 3*
+\begin{aligned}
+price_t = \beta_0 + \beta_1Dheavyraint + \beta_2tempt + \beta_3tempt · Dheavyraint + ut
+\end{aligned}
+
 a.
 a.
 
 ## Exercise 5 
 a.
 a.
-
-
-                       Mean         Median        Minimum        Maximum
-price                1405,8         1079,8         495,17         4883,9
-WinterRain           608,41         600,00         376,00         830,00
-temp                 16,478         16,417         14,983         17,650
-HarvestRain          144,81         123,00         38,000         292,00
-Age                  16,185         16,000         3,0000         31,000
-
-                  Std. Dev.           C.V.       Skewness   Ex. kurtosis
-price                1027,2        0,73071         1,7588         3,1369
-WinterRain           129,03        0,21209       0,039262       -0,74616
-temp                0,65919       0,040005       -0,23480       -0,42924
-HarvestRain          73,066        0,50455        0,60994       -0,59182
-Age                  8,2464        0,50950        0,11243        -1,0755
-
-                   5% perc.      95% perc.       IQ range   Missing obs.
-price                502,96         4216,5         1135,3              2
-WinterRain           386,40         826,40         178,00              2
-temp                 15,137         17,583        0,93340              2
-HarvestRain          43,200         291,20         100,00              2
-Age                  3,4000         30,600         14,000              2
 
 
 
