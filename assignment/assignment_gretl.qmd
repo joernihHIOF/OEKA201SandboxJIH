@@ -55,4 +55,15 @@ a.
 a.
 
 
+## Tips til kode
+
+Legger til txt fil fra Gretl
+
+``` 
+{{< include gretl/desc.txt >}}
+```
+
+Legger til png fra Gretl
+
+![Png of residualta](gretl/res1.png)
 
