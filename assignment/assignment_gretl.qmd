@@ -15,17 +15,19 @@ author:
 
 [Bjørnar's assignment](https://hiof.instructure.com/courses/9596/files/folder/Assignment?preview=1695176) 
 
+Inline equations $\theta=2+2$
+
 
 ## Exercise 1 
 
-Inline equations $\theta=2+2$
 
 
 ## Exercise 2 
 *Model 1*
-\begin{aligned}
-price_t = \beta_0 + \beta_1Age \\
-\end{aligned}
+$$
+price_i = \beta_0 + \beta_1Age_i + u_i 
+$$
+
 a.
 a.
 a.
@@ -34,18 +36,18 @@ a.
 
 ## Exercise 3 
 *Model 2*
-\begin{aligned}
-price_t = \beta_0 + \beta_1Age + \beta_2WinterRain  +\beta_3temp + \beta_3HarvestRain \\
-\end{aligned}
+$$
+price_i = \beta_0 + \beta_1Age_i + \beta_2WinterRain_i  +\beta_3temp_i + \beta_3HarvestRain_i + u_i \\
+c
 a.
 a.
 a.
 
 ## Exercise 4 
 *Model 3*
-\begin{aligned}
-price_t = \beta_0 + \beta_1Dheavyraint + \beta_2tempt + \beta_3tempt · Dheavyraint + ut
-\end{aligned}
+$$
+price_i = \beta_0 + \beta_1Dheavyraint_i + \beta_2tempt_i + \beta_3temp_i · Dheavyrain_i + u_i
+$$
 
 a.
 a.
