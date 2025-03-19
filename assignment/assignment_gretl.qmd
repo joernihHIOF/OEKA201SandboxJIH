@@ -72,4 +72,4 @@ Legger til png fra Gretl
 
 
 
-abc
+test
