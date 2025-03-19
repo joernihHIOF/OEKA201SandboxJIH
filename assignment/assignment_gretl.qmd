@@ -38,7 +38,8 @@ a.
 *Model 2*
 $$
 price_i = \beta_0 + \beta_1Age_i + \beta_2WinterRain_i  +\beta_3temp_i + \beta_3HarvestRain_i + u_i \\
-c
+$$
+
 a.
 a.
 a.
@@ -69,3 +70,6 @@ Legger til png fra Gretl
 
 ![Png of residualta](gretl/res1.png)
 
+
+
+abc
