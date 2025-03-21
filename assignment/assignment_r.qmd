@@ -1,1 +1,53 @@
-2+2
+---
+title : "Bjørnar's assignment in r"
+format: 
+  html:
+    toc: true
+author:
+  - name: 
+    affiliations:
+      - Høgskolen i Østfold (HiOF)
+abstract: "This document ... replicates ..."
+---
+
+```{r}
+#| echo=F
+source("assm.R")
+```
+
+
+## Exercise 1 
+
+## Exercise 2 
+
+a.
+a.
+a.
+
+## Exercise 3 
+
+a.
+a.
+a.
+
+## Exercise 4 
+
+## Exercise 5 
+a.
+a.
+
+
+## Conclusions
+In this document 
+
+[@wickham2015r]
+
+## Appendix
+
+
+## References
+
+
+
+
+
