@@ -7,30 +7,49 @@ author:
   - name: 
     affiliations:
       - Høgskolen i Østfold (HiOF)
-abstract: "This document ... replicates ..."
+#abstract: ""
+#keywords: ""
 ---
 
 ```{r}
 #| echo=F
-source("assm.R")
+#source("assm.R")
 ```
-
 
 ## Exercise 1 
 
-## Exercise 2 
 
+
+## Exercise 2 
+*Model 1*
+$$
+price_i = \beta_0 + \beta_1Age_i + u_i 
+$$
+
+a.
+a.
 a.
 a.
 a.
 
 ## Exercise 3 
+*Model 2*
+$$
+price_i = \beta_0 + \beta_1Age_i + \beta_2WinterRain_i  +\beta_3temp_i + \beta_3HarvestRain_i + u_i \\
+$$
 
 a.
 a.
 a.
 
 ## Exercise 4 
+*Model 3*
+$$
+price_i = \beta_0 + \beta_1Dheavyraint_i + \beta_2tempt_i + \beta_3temp_i · Dheavyrain_i + u_i
+$$
+
+a.
+a.
 
 ## Exercise 5 
 a.
@@ -50,6 +69,10 @@ In this document
 
 
 
+<!--
+
+## Tip for coding
 
 
+-->
 

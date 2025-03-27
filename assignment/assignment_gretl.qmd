@@ -58,7 +58,8 @@ a.
 a.
 
 
-## Tips til kode
+<!-- 
+## Tip for coding 
 
 Legger til txt fil fra Gretl
 
@@ -72,7 +73,6 @@ Legger til png fra Gretl
 
 
 
-test
-
+-->
 
 
