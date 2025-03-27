@@ -1,5 +1,5 @@
 ---
-title : "Bjørnar's assignment in r"
+title : "Bjørnar's assignment using R"
 format: 
   html:
     toc: true
@@ -11,10 +11,6 @@ author:
 #keywords: ""
 ---
 
-```{r}
-#| echo=F
-#source("assm.R")
-```
 
 ## Exercise 1 
 
@@ -72,6 +68,13 @@ In this document
 <!--
 
 ## Tip for coding
+
+### Reads R-code into memory
+```{r}
+#| echo=F
+#source("<name of directory and file>")
+```
+
 
 
 -->
