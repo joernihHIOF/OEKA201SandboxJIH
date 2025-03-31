@@ -11,6 +11,13 @@ author:
 #keywords: ""
 ---
 
+<!--
+```{r}
+#| echo=F
+# Reads R-code into memory
+#source("<name of directory and file>")
+```
+-->
 
 ## Exercise 1 
 
@@ -85,18 +92,4 @@ See from @tbl-arf1
 
 
 
-
-<!--
-
-## Tip for coding
-
-### Reads R-code into memory
-```{r}
-#| echo=F
-#source("<name of directory and file>")
-```
-
-
-
--->
 
