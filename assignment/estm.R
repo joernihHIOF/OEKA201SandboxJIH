@@ -1,17 +1,20 @@
 # Libraries
+# Libraries
+## Internal
+#library(OEKA201ProgrammingJ<>)  # Insert your package here
+## External
 library(readr)
 library(broom)
 library(gretlR)
-suppressPackageStartupMessages(library(dplyr))
+
 # Settings
 # Reading data
-iwine <- readr::read_csv("https://raw.githubusercontent.com/joernih/OEKA201Assignment/refs/heads/main/data-raw/csv/wine.csv",show_col_types = FALSE)
+#iwine <- <insert your package data here> 
 owine <- iwine %>%
         # variables in use
         dplyr::select(price, WinterRain, temp, HarvestRain, Age) %>%
         ## interaction effects
         ## na ommit
-
 
 ### Exercise 1
 

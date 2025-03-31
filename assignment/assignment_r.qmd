@@ -31,7 +31,7 @@ a.
 ## Exercise 3 
 *Model 2*
 $$
-price_i = \beta_0 + \beta_1Age_i + \beta_2WinterRain_i  +\beta_3temp_i + \beta_3HarvestRain_i + u_i \\
+price_i = \beta_0 + \beta_1Age_i + \beta_2WinterRain_i  +\beta_3temp_i + \beta_3HarvestRain_i + u_i 
 $$
 
 a.
