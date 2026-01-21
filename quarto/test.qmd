@@ -1,0 +1,36 @@
+---
+title: "test"
+format: html
+---
+
+# Abc
+
+text goes here....
+
+## Exercise 1
+### a
+### b
+### c
+
+## Exercise 2
+
+## Exercise 3
+
+### a
+![Caption](elephant.png)
+
+accepts html code
+
+$$
+x=f(N,K)
+$$
+
+in this case the shourt run prouction
+function is $x=f(N)$
+
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
