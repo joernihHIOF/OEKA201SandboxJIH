@@ -1,7 +1,10 @@
 ---
 title: "test"
-format: html
+format:
+  pptx:
+    output-file: "quarto/abc/abc.pptx"
 ---
+
 
 # Abc
 
