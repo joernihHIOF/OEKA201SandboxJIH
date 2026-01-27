@@ -1,14 +1,24 @@
 ---
-title: "test"
-format:
-  docx: default
-  html: default
+title: "My Document"
+author: "John Doe"
+format: html
+#title: "My Document"
+#author: "John Doe"
+#format: docx
+#title: "My Document"
+#author: "John Doe"
+#format: pdf
+#title: "My Document"
+#author: "John Doe"
+#format: 
+#  pdf:
+#    keep-tex: true
 ---
 
 
 # Abc
 
-text goes here....
+text goes here....abc
 
 ## Exercise 1
 ### a
@@ -20,7 +30,7 @@ text goes here....
 ## Exercise 3
 
 ### a
-![Caption](elephant.png)
+![Caption](images/elephant.png)
 
 accepts html code
 
@@ -39,3 +49,5 @@ function is $x=f(N)$
 |   12  |  12  |    12   |    12  |
 |  123  |  123 |   123   |   123  |
 |    1  |    1 |     1   |     1  |
+
+
