@@ -1,5 +1,5 @@
 ---
-title : "Bjørnar's assignment using Gretl"
+title : "Template for Bjørnar's assignment using Gretl"
 format: html
 #format: pdf
 #format: docx

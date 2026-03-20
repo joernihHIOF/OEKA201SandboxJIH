@@ -1,14 +1,19 @@
 ---
-title : "Bjørnar's assignment using R"
+title : "Template for Bjørnar's assignment using Gretl"
 format: 
   html:
     toc: true
+##format: pdf
+##format: docx
 author:
-  - name: 
+  - name: John Doe
     affiliations:
-      - Høgskolen i Østfold (HiOF)
-#abstract: ""
-#keywords: ""
+      - Carnegie Mellon University
+  - name: Jane Smith
+    affiliations:
+      - Stanford University
+abstract: "Abc"
+keywords: "Key 1, key2"
 ---
 
 <!--
@@ -85,11 +90,6 @@ See from @fig-rain
 See from @tbl-arf1
 
 ## References
-
-
-
-## References
-
 
 
 

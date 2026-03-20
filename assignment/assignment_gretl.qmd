@@ -1,13 +1,11 @@
 ---
-title : "Bjørnar's assignment using Gretl"
-format: html
+title : "Template for Bjørnar's assignment using Gretl" format: html
 #format: pdf
 #format: docx
 author:
   - name: John Doe
     affiliations:
       - Carnegie Mellon University
-      - University of Chicago
   - name: Jane Smith
     affiliations:
       - Stanford University
