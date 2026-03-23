@@ -24,11 +24,17 @@ keywords: "Key 1, key2"
 ```
 -->
 
-## Exercise 1 
+# Step A: Research question and data
+## 1. Research question
+## 2. Data set
+# Step B: Analysis
+## 1. Data Description & Summary
+## 2. Simple regression model
+## 3. Multiple regression Model 
+## 4. Dummy variable analysis
+## 4. Non-linear effects
+## 5. Model selection and analysis
 
-
-
-## Exercise 2 
 *Model 1*
 $$
 price_i = \beta_0 + \beta_1Age_i + u_i 
@@ -40,7 +46,6 @@ a.
 a.
 a.
 
-## Exercise 3 
 *Model 2*
 $$
 price_i = \beta_0 + \beta_1Age_i + \beta_2WinterRain_i  +\beta_3temp_i + \beta_3HarvestRain_i + u_i 
@@ -49,20 +54,6 @@ $$
 a.
 a.
 a.
-
-## Exercise 4 
-*Model 3*
-$$
-price_i = \beta_0 + \beta_1Dheavyraint_i + \beta_2tempt_i + \beta_3temp_i · Dheavyrain_i + u_i
-$$
-
-a.
-a.
-
-## Exercise 5 
-a.
-a.
-
 
 ## Conclusions
 In this document 
@@ -90,9 +81,4 @@ See from @fig-rain
 See from @tbl-arf1
 
 ## References
-
-
-
-
-
 
